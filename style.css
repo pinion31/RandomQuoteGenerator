@@ -15,6 +15,12 @@ h2 {
     color:white;
 }
 
+.twitter {
+
+    text-align: center;
+    margin: auto;
+}
+
 .center {
 
     text-align: center;
@@ -52,6 +58,7 @@ p {
     margin:auto;
     word-wrap: break-word;
 
+
 }
 
 #textspace {
@@ -71,6 +78,8 @@ p {
     border-radius: 25px;
     max-width: 50%;
     max-height: 220px;
+    margin-bottom: 20px;
+
     /*word-break: break-all;*/
     /*
     display:inline-block;

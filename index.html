@@ -13,8 +13,9 @@
     <script>
     $(document).ready(function(){
 
-        $(".button").click(function() {
 
+
+        $(".button").click(function() {
 
             $.ajax({url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback", cache:false, dataType:"jsonp", jsonpCallback:"mycallback", success:function(data) {
 
@@ -22,11 +23,26 @@
 
                     $("p").html(s + "<p>- " + data[0].title + " \n </p");
 
+                    var f = s + " -" + data[0].title;
+                    f = $("#textspace").text();
+
+
+                    $(".twitter").html("<a href='https://twitter.com/intent/tweet?text=" + f + "' class='twitter-share-button' data-show-count='false'>Tweet</a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'> </   script>");
+                    //$("a").attr("href", "https://twitter.com/intent/tweet?text=" + f);
+                    //$("a").html("<a href='https://twitter.com/intent/tweet?text=Hello' class='twitter-share-button' data-show-count='false'>Tweet</a>");
                 }
             });
 
+          //$(".twitter").html("<a href='https://twitter.com/intent/tweet?text=" + f + "' class='twitter-share-button' data-show-count='false'>Tweet</a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'> </   script>");
+          //$(".twitter-share-button").attr('href', "https://twitter.com/intent/tweet?text=working");
+          //console.log($('.twitter-share-button').attr('href'));
+
+
 
         });
+
+
+
      });
 
     </script>
@@ -48,5 +64,11 @@
             <p></p>
         </div>
 
+        <div class="twitter">
+            <a id="tweet" href="https://twitter.com/intent/tweet?text=testing" class="twitter-share-button" data-show-count="false">Tweet</a>
+
+
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
     </body>
 </html>
