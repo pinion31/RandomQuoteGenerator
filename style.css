@@ -1,0 +1,86 @@
+.redBackground {
+
+    background-color:red;
+
+}
+
+
+h1 {
+   color:white;
+   font-size: 500%;
+}
+
+h2 {
+    font-size: 300%;
+    color:white;
+}
+
+.center {
+
+    text-align: center;
+    margin: auto;
+
+}
+
+.button:hover {
+    background-color:gray;
+
+}
+
+.button {
+
+    padding:20px;
+    font-size:16px;
+    border:none;
+    background-color:red;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+    margin-bottom: 20px;
+}
+
+p {
+    padding: 20px 15px 10px 15px;
+
+    color:white;
+    font-size: 110%;
+    overflow-y:auto;
+    /*
+    line-height: 200px;
+    */
+    text-align: center;
+    margin:auto;
+    word-wrap: break-word;
+
+}
+
+#textspace {
+
+    /*
+    position:absolute;
+    bottom:80px;
+    left:350px;
+    */
+
+    overflow-y: auto;
+    margin:auto;
+    height: 220px;
+    width: 50%;
+    background-color:red;
+   /* line-height: 200px;*/
+    border-radius: 25px;
+    max-width: 50%;
+    max-height: 220px;
+    /*word-break: break-all;*/
+    /*
+    display:inline-block;
+    width:500px;
+    height:500px;
+    margin:auto;
+    */
+
+}
+
+
+
+

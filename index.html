@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+      <link rel="stylesheet" href="style.css">
+    <title>Random Quote Machine</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+
+        $(".button").click(function() {
+
+
+            $.ajax({url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback", cache:false, dataType:"jsonp", jsonpCallback:"mycallback", success:function(data) {
+
+                    var s = data[0].content;
+
+                    $("p").html(s + "<p>- " + data[0].title + " \n </p");
+
+                }
+            });
+
+
+        });
+     });
+
+    </script>
+    </head>
+    <body style="background-color:black">
+        <span class = "center">
+            <h1> Random Quote Machine </h1>
+        </span>
+        <span class = "center">
+            <h2> Click the button to summon a new quote </h2>
+        </span>
+
+        <div class = "center">
+            <button class="button"> Click for more wisdom </button>
+        </div>
+
+        <!-- quote box -->
+        <div  id="textspace">
+            <p></p>
+        </div>
+
+    </body>
+</html>
